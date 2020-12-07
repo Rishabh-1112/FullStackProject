@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Generics | Join</title>
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(Images/register.jpg);
+}
+.col-xs{
+  width:350px;
+  background-color: white;
+  height:440px;
+  border-radius: 4px;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding:10px;
+}
+h1{
+  text-align: center;
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.input{
+  margin: 15px;
+  height:20px;
+  border:none;
+  outline:none;
+  border-bottom:1px solid black;
+  width: 450px;
+}
+#form small{
+  font-weight: bolder;
+  margin:5px;
+  margin-left:10px;
+  color: red;
+  visibility: hidden;
+}
+.name{
+  display: flex;
+  /* border:1px solid black; */
+}
+.email{
+  display: flex;
+}
+.password{
+  display: flex;
+}
+.confirm-password{
+  display: flex;
+  color: black;
+}
+.name i{
+  margin:0px;
+  position: absolute;
+  right:550px;
+  text-align: center;
+  top:185px;
+  visibility: hidden;
+}
+.email i{
+  margin:0px;
+  position: absolute;
+  right:550px;
+  text-align: center;
+  top:263px;
+  visibility: hidden;
+}
+.password i{
+  margin:0px;
+  position: absolute;
+  right:550px;
+  text-align: center;
+  top:342px;
+  visibility: hidden;
+}
+.confirm-password i{
+  margin:0px;
+  position: absolute;
+  right:550px;
+  text-align: center;
+  top:422px;
+  visibility: hidden;
+}
+#submit-btn{
+  width:200px;
+  height:40px;
+  text-align: center;
+  margin: auto;
+  border:none;
+  outline:none;
+  background-color: #f50525;
+  border-radius:5px;
+  color:white;
+}
+@media(max-width:768px){
+  .container{
+    width:300px;
+    background-color: white;
+    height:440px;
+    border-radius: 4px;
+  }
+  #submit-btn{
+    width:100px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="col-xs">
+      <form id="form">
+        <h1 style="color: #f50525;">JOIN US!!!</h1>
+        <div class="name">
+          <input
+            class="input"
+            type="text"
+            id="username"
+            placeholder="Username"
+          />
+          <i id='name-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='name-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="user-msg">* njejfwef </small>
+        <div class="email">
+          <input class="input" type="text" id="email" placeholder="Email" />
+          <i id='email-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='email-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="email-error">* njejfwef</small>
+        <div class="password">
+          <input
+            class="input"
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <i id='password-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='password-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="pass-error">* njejfwef </small>
+        <div class="confirm-password">
+          <input
+            class="input"
+            type="password"
+            id="confirm-password"
+            placeholder="Enter Password Again"
+          />
+          <i id='confirm-fails' class="fa fa-exclamation-triangle" style="color:red"></i>
+          <i id='confirm-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="confirm-error">* njejfwef </small>
+        <button id="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="register.js"></script>
+</html>
